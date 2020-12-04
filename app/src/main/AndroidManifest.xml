@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OneShotRPG">
+        <activity android:name=".EntrarActivity"
+            android:label="@string/title_activity_entrar"/>
+        <activity android:name=".RegistrarActivity"
+            android:label="@string/title_activity_registrar"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
