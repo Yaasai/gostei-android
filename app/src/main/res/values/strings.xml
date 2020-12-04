@@ -1,5 +1,3 @@
 <resources>
     <string name="app_name">OneShotRPG</string>
-    <string name="title_activity_registrar">Registrar</string>
-    <string name="title_activity_entrar">Entrar</string>
 </resources>

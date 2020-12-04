@@ -7,22 +7,6 @@
     android:background="#4C3377"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/buttonEntrar"
-        android:layout_width="240dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="159dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="159dp"
-        android:text="Entrar"
-        android:textColor="#4C3377"
-        app:cornerRadius="80px"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonRegistrar"
-        app:rippleColor="#4C3377"
-        app:strokeColor="#FFFFFF" />
-
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="366dp"
@@ -36,13 +20,13 @@
         app:srcCompat="@drawable/oneshot_logo" />
 
     <Button
-        android:id="@+id/buttonRegistrar"
+        android:id="@+id/buttonEntrar"
         android:layout_width="240dp"
         android:layout_height="70dp"
         android:layout_marginStart="159dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="108dp"
         android:layout_marginEnd="159dp"
-        android:text="Registrar"
+        android:text="Entrar"
         app:cornerRadius="100px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
