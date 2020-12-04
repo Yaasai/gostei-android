@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "629314784193",
+    "project_id": "oneshotrpg-820bf",
+    "storage_bucket": "oneshotrpg-820bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629314784193:android:2311b9ae167c29516ffd40",
+        "android_client_info": {
+          "package_name": "com.epicjames.oneshotrpg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629314784193-pfq276gpk0gir4frmqjki90ll013i5h1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwCa8-EI_UuLePWvNWh5YIydosoJ2aQMo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629314784193-pfq276gpk0gir4frmqjki90ll013i5h1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
