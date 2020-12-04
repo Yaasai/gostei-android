@@ -8,9 +8,7 @@ class RegistrarActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registrar)
 
-        //actionbar
         val actionbar = supportActionBar
-        //set back button
         if (actionbar != null) {
             actionbar.setDisplayHomeAsUpEnabled(true)
         }
