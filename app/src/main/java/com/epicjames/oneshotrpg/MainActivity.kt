@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onOptionsItemSelected(): Boolean {
-        startActivity(Intent(this, CartActivity::class.java))
+        startActivity(Intent(this, PerfilActivity::class.java))
         return true
     }
 

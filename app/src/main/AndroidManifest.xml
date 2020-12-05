@@ -10,6 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OneShotRPG">
 
+        <activity android:name=".ComprasActivity"
+            android:label="Comprar anteriores"
+            android:parentActivityName=".PerfilActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.epicjames.oneshotrpg.PerfilActivity"/>
+        </activity>
+
+        <activity android:name=".PerfilActivity"
+            android:label="Perfil"/>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
