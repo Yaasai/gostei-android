@@ -3,8 +3,10 @@ package com.epicjames.oneshotrpg
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.epicjames.carrinho.CartActivity
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -35,6 +37,7 @@ class MainActivity : AppCompatActivity() {
             }
             else {
                 Toast.makeText(this, "Já autenticado!", Toast.LENGTH_LONG).show()
+                onOptionsItemSelected()
             }
         }
     }
@@ -50,6 +53,11 @@ class MainActivity : AppCompatActivity() {
                 finishAffinity()
             }
         }
+    }
+
+    private fun onOptionsItemSelected(): Boolean {
+        startActivity(Intent(this, CartActivity::class.java))
+        return true
     }
 
     private fun getCurrentUser(): FirebaseUser? {
