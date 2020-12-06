@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">OneShotRPG</string>
+    <string name="your_cart">Seu carrinho</string>
+    <string name="end_cart">Finalizar Compra</string>
+    <string name="back">Voltar</string>
 </resources>
