@@ -13,7 +13,7 @@ class PerfilActivity : AppCompatActivity() {
 
         val user = FirebaseAuth.getInstance().currentUser
 
-        textNome.text = user?.displayName
+        textNome.text = "Bem vindo, " + user?.displayName + "!"
 
         buttonCompras.setOnClickListener {
             val intent = Intent(this, ComprasActivity::class.java)

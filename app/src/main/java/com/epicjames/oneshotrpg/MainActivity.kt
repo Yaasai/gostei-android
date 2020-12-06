@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
                 )
             }
             else {
-                Toast.makeText(this, "Já autenticado!", Toast.LENGTH_LONG).show()
                 onOptionsItemSelected()
             }
         }

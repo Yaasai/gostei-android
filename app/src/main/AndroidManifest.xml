@@ -9,18 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OneShotRPG">
-
-        <activity android:name=".ComprasActivity"
-            android:label="Comprar anteriores"
+        <activity
+            android:name=".ComprasActivity"
+            android:label="Compras anteriores"
             android:parentActivityName=".PerfilActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.epicjames.oneshotrpg.PerfilActivity"/>
+                android:value="com.epicjames.oneshotrpg.PerfilActivity" />
         </activity>
-
-        <activity android:name=".PerfilActivity"
-            android:label="Perfil"/>
-
+        <activity
+            android:name=".PerfilActivity"
+            android:label="Perfil" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
