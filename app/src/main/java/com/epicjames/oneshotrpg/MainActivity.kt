@@ -25,7 +25,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonEntrar.setOnClickListener {
-            if (getCurrentUser() == null) {
+            val user = getCurrentUser()
+            if (user == null) {
                 val providers = arrayListOf(AuthUI.IdpConfig.EmailBuilder().build())
 
                 startActivityForResult(

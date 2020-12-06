@@ -26,5 +26,11 @@ class PerfilActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+
+        buttonProdutos.setOnClickListener {
+            val intent = Intent(this, ProdutosActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

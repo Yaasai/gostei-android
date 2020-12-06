@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OneShotRPG">
         <activity
+            android:name=".ProdutosActivity"
+            android:label="Produtos"
+            android:parentActivityName=".PerfilActivity"
+            ></activity>
+        <activity
             android:name=".ComprasActivity"
             android:label="Compras anteriores"
             android:parentActivityName=".PerfilActivity">

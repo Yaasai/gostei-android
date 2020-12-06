@@ -17,6 +17,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/buttonProdutos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Produtos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCompras" />
+
+    <Button
         android:id="@+id/buttonSair"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,7 +34,7 @@
         android:text="Sair"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCompras" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonProdutos" />
 
     <TextView
         android:id="@+id/textNome"
