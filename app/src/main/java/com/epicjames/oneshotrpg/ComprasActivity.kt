@@ -30,7 +30,6 @@ class ComprasActivity : AppCompatActivity() {
         val userRef = userID?.let {database.child("usuarios").child(it).child("compras")}
         userRef?.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                val post = snapshot.getValue()
                 snapshot.children.forEach{
                     val item = it.getValue() as HashMap<*, *>
 
@@ -43,7 +42,7 @@ class ComprasActivity : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                println(error!!.message)
+                println(error.message)
             }
         })
     }

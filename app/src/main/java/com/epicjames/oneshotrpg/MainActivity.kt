@@ -3,10 +3,8 @@ package com.epicjames.oneshotrpg
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.epicjames.carrinho.CartActivity
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
