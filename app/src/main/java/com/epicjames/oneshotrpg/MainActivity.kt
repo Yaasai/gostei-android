@@ -25,7 +25,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonEntrar.setOnClickListener {
-            if (getCurrentUser() == null) {
+            val user = getCurrentUser()
+            if (user == null) {
                 val providers = arrayListOf(AuthUI.IdpConfig.EmailBuilder().build())
 
                 startActivityForResult(
@@ -36,7 +37,6 @@ class MainActivity : AppCompatActivity() {
                 )
             }
             else {
-                Toast.makeText(this, "Já autenticado!", Toast.LENGTH_LONG).show()
                 onOptionsItemSelected()
             }
         }
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onOptionsItemSelected(): Boolean {
-        startActivity(Intent(this, CartActivity::class.java))
+        startActivity(Intent(this, PerfilActivity::class.java))
         return true
     }
 
