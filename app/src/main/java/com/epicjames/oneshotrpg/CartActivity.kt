@@ -7,7 +7,7 @@ import com.firebase.ui.auth.data.model.User
 
 
 class CartActivity : AppCompatActivity() {
-    val pedidos: MutableList<Pedido> = mutableListOf<Pedido>()
+    val pedidos: MutableList<Pedido> = Pedido.registros
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cart)

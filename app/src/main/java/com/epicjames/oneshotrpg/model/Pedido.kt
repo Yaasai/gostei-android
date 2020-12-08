@@ -10,4 +10,8 @@ class Pedido: Serializable {
         this.produto = produto
         this.quantidade = quantidade
     }
+
+    companion object pedidos {
+        val registros: MutableList<Pedido> = mutableListOf<Pedido>()
+    }
 }
