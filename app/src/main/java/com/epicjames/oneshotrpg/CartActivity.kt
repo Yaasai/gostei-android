@@ -23,6 +23,8 @@ class CartActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+        val actionbar = supportActionBar
+        actionbar?.setDisplayHomeAsUpEnabled(true)
         if (intent.extras != null) {
             val pedido: Pedido = intent.getSerializableExtra("PEDIDO") as Pedido
             pedidos.add(pedido)
