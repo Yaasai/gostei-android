@@ -1,27 +1,27 @@
 package com.epicjames.oneshotrpg
 
+import android.app.Activity
 import android.content.Intent
+import android.graphics.Bitmap
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import androidx.fragment.app.DialogFragment
-import com.epicjames.carrinho.CartActivity
 import com.epicjames.oneshotrpg.model.Pedido
 import com.epicjames.oneshotrpg.model.Produto
 import kotlinx.android.synthetic.main.fragment_comprar.*
 import java.util.*
 
 class ComprarFragment : DialogFragment() {
-
     companion object {
         private const val KEY_NOME = "KEY_NOME"
         private const val KEY_DESCRICAO = "KEY_DESCRICAO"
         private const val KEY_PRECO = "KEY_PRECO"
         private const val KEY_IMAGEM = "KEY_IMAGEM"
+        private const val KEY_CATEGORIA = "KEY_CATEGORIA"
         lateinit var produto: Produto
-
         fun newInstance(produto: Produto): ComprarFragment {
             this.produto = produto
             val args = Bundle()
@@ -29,6 +29,7 @@ class ComprarFragment : DialogFragment() {
             args.putString(KEY_DESCRICAO, produto.descricao)
             args.putFloat(KEY_PRECO, produto.preco)
             args.putParcelable(KEY_IMAGEM, produto.imagem)
+            args.putString(KEY_CATEGORIA, produto.categoria)
             val fragment = ComprarFragment()
             fragment.arguments = args
             return fragment
@@ -62,9 +63,9 @@ class ComprarFragment : DialogFragment() {
             val preco = produto.preco
             val imagem = produto.imagem
             val categoria = produto.categoria
+            val intent = Intent(activity,CartActivity::class.java)
             val produto: Produto = Produto(nome,desc,preco,imagem, categoria)
-            val pedido: Pedido = Pedido(produto, textQuantidade.text.toString().toInt())
-            val intent = Intent(activity, CartActivity::class.java)
+            val pedido:Pedido = Pedido(produto, textQuantidade.text.toString().toInt())
             intent.putExtra("PEDIDO", pedido)
             startActivity(intent)
         }

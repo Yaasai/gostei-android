@@ -32,5 +32,10 @@ class PerfilActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        buttonCart.setOnClickListener {
+            val intent = Intent(this, CartActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
