@@ -12,6 +12,10 @@ class Pedido: Serializable {
     }
 
     companion object pedidos {
-        val registros: MutableList<Pedido> = mutableListOf<Pedido>()
+        var registros: MutableList<Pedido> = mutableListOf<Pedido>()
+
+        fun limparRegistros() {
+            this.registros =  mutableListOf()
+        }
     }
 }

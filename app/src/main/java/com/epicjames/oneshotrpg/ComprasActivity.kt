@@ -37,7 +37,7 @@ class ComprasActivity : AppCompatActivity() {
 
                     val rowItem = layoutInflater.inflate(R.layout.row_pedido, container, false)
                     rowItem.textCompra.text = item.get("pedido") as String
-                    rowItem.textPreco.text = "R$ " + item.get("preço") as String
+                    rowItem.textPreco.text = "R$ " + "%.2f".format((item.get("preço")).toString().toFloat())
 
                     container.addView(rowItem)
                 }

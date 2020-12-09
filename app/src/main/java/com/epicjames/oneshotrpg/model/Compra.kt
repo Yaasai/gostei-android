@@ -1,12 +1,10 @@
 package com.epicjames.oneshotrpg.model
 
-class Compras {
-    val id: Int
+class Compra {
     val pedido: String
     val preço: Double
 
-    constructor(id: Int, pedido: String, preço: Double) {
-        this.id = id
+    constructor(pedido: String, preço: Double) {
         this.pedido = pedido
         this.preço = preço
     }

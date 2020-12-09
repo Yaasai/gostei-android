@@ -8,11 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.DialogFragment
 import com.epicjames.oneshotrpg.model.Pedido
 import com.epicjames.oneshotrpg.model.Produto
 import kotlinx.android.synthetic.main.fragment_comprar.*
-import java.util.*
 
 class ComprarFragment : DialogFragment() {
     companion object {
@@ -38,6 +38,28 @@ class ComprarFragment : DialogFragment() {
         textnome.text = produto.nome
         textpreco.text = "R$ " + "%.2f".format(produto.preco)
         textdescricao.text = produto.descricao
+        botaocarrinho.isEnabled = false
+
+        textQuantidade.addTextChangedListener {
+            try {
+                val texto = it.toString()
+                if(texto != "") {
+                    val quantidade = textQuantidade.text.toString().toInt()
+                    if(quantidade <= 0) {
+                        textQuantidade.error = "Quantidade inválida"
+                        botaocarrinho.isEnabled = false
+                    } else {
+                        textQuantidade.error = null
+                        botaocarrinho.isEnabled = true
+                    }
+                } else {
+                    botaocarrinho.isEnabled = false
+                }
+            } catch (e: NumberFormatException ) {
+                textQuantidade.error = "Número inválido"
+                botaocarrinho.isEnabled = false
+            }
+        }
 
         botaocarrinho.setOnClickListener {
             val nome = produto.nome
@@ -45,8 +67,8 @@ class ComprarFragment : DialogFragment() {
             val preco = produto.preco
             val categoria = produto.categoria
             val intent = Intent(activity,CartActivity::class.java)
-            val produto: Produto = Produto(nome, desc, preco, null, categoria)
-            val pedido: Pedido = Pedido(produto, textQuantidade.text.toString().toInt())
+            val produto = Produto(nome, desc, preco, null, categoria)
+            val pedido = Pedido(produto, textQuantidade.text.toString().toInt())
             intent.putExtra("PEDIDO", pedido)
             startActivity(intent)
             dialog?.dismiss()
