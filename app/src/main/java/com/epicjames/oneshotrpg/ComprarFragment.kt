@@ -16,23 +16,10 @@ import java.util.*
 
 class ComprarFragment : DialogFragment() {
     companion object {
-        private const val KEY_NOME = "KEY_NOME"
-        private const val KEY_DESCRICAO = "KEY_DESCRICAO"
-        private const val KEY_PRECO = "KEY_PRECO"
-        private const val KEY_IMAGEM = "KEY_IMAGEM"
-        private const val KEY_CATEGORIA = "KEY_CATEGORIA"
         lateinit var produto: Produto
         fun newInstance(produto: Produto): ComprarFragment {
             this.produto = produto
-            val args = Bundle()
-            args.putString(KEY_NOME, produto.nome)
-            args.putString(KEY_DESCRICAO, produto.descricao)
-            args.putFloat(KEY_PRECO, produto.preco)
-            args.putParcelable(KEY_IMAGEM, produto.imagem)
-            args.putString(KEY_CATEGORIA, produto.categoria)
-            val fragment = ComprarFragment()
-            fragment.arguments = args
-            return fragment
+            return ComprarFragment()
         }
     }
 
@@ -46,29 +33,23 @@ class ComprarFragment : DialogFragment() {
 
     override fun onStart() {
         super.onStart()
-        dialog?.window?.setLayout(
-            WindowManager.LayoutParams.MATCH_PARENT,
-            WindowManager.LayoutParams.WRAP_CONTENT
-        )
-        imagemproduto.setImageBitmap(arguments?.getParcelable(KEY_IMAGEM))
-        textnome.text = arguments?.getString(KEY_NOME)
-        textpreco.text = "R$ " + arguments?.getFloat(KEY_PRECO).toString()
-        textdescricao.text = arguments?.getString(KEY_DESCRICAO)
+        dialog?.window?.setLayout( WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT )
+        imagemproduto.setImageBitmap(produto.imagem)
+        textnome.text = produto.nome
+        textpreco.text = "R$ " + "%.2f".format(produto.preco)
+        textdescricao.text = produto.descricao
 
         botaocarrinho.setOnClickListener {
-            // Adiciona ao carrinho
-            // @Eiji
             val nome = produto.nome
             val desc = produto.descricao
             val preco = produto.preco
-            val imagem = produto.imagem
             val categoria = produto.categoria
             val intent = Intent(activity,CartActivity::class.java)
-            val produto: Produto = Produto(nome,desc,preco,imagem, categoria)
-            val pedido:Pedido = Pedido(produto, textQuantidade.text.toString().toInt())
+            val produto: Produto = Produto(nome, desc, preco, null, categoria)
+            val pedido: Pedido = Pedido(produto, textQuantidade.text.toString().toInt())
             intent.putExtra("PEDIDO", pedido)
             startActivity(intent)
-
+            dialog?.dismiss()
         }
     }
     override fun onSaveInstanceState(outState: Bundle) {
