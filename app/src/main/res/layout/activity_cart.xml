@@ -20,9 +20,11 @@
         tools:text="@string/your_cart" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/CartRecyclerView"
         android:layout_width="0dp"
         android:layout_height="333dp"
         android:layout_marginTop="16dp"
+        android:scrollbars="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

@@ -68,6 +68,12 @@ class ComprarFragment : DialogFragment() {
             val pedido:Pedido = Pedido(produto, textQuantidade.text.toString().toInt())
             intent.putExtra("PEDIDO", pedido)
             startActivity(intent)
+
         }
+    }
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        if (outState != null)
+            outState.clear()
     }
 }
