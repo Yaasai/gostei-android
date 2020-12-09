@@ -52,6 +52,7 @@ class ComprarFragment : DialogFragment() {
             dialog?.dismiss()
         }
     }
+
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         if (outState != null)
