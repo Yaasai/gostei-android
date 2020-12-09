@@ -22,9 +22,6 @@ class PedidosAdapter(private var pedidos: MutableList<Pedido>) : RecyclerView.Ad
         val pedidoSelecionado: Pedido = pedidos.get(position)
         val produtoNome: String = pedidoSelecionado.produto.nome
         val produtoQuantidade: Int = pedidoSelecionado.quantidade
-        // Causando o erro por aqui
-        println(produtoNome)
-        println(produtoQuantidade)
         holder.txtProdutoNome.setText(produtoNome)
         holder.txtQuantidade.setText(produtoQuantidade.toString())
 

@@ -2,6 +2,7 @@ package com.epicjames.oneshotrpg
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.epicjames.oneshotrpg.adapter.PedidosAdapter
@@ -48,4 +49,5 @@ class CartActivity : AppCompatActivity() {
         if(outState != null)
             outState.clear()
     }
+    //TODO Resolver bug de memoria com um dos produtos
 }

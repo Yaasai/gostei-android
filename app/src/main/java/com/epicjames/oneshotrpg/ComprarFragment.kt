@@ -56,21 +56,21 @@ class ComprarFragment : DialogFragment() {
         textdescricao.text = arguments?.getString(KEY_DESCRICAO)
 
         botaocarrinho.setOnClickListener {
-            // Adiciona ao carrinho
-            // @Eiji
-            val nome = produto.nome
-            val desc = produto.descricao
-            val preco = produto.preco
-            val imagem = produto.imagem
-            val categoria = produto.categoria
-            val intent = Intent(activity,CartActivity::class.java)
-            val produto: Produto = Produto(nome,desc,preco,imagem, categoria)
-            val pedido:Pedido = Pedido(produto, textQuantidade.text.toString().toInt())
-            intent.putExtra("PEDIDO", pedido)
-            startActivity(intent)
-
+            if(textQuantidade.text.toString() != "" && textQuantidade.text.toString().toInt() > 0) {
+                val nome = produto.nome
+                val desc = produto.descricao
+                val preco = produto.preco
+                val imagem = null
+                val categoria = produto.categoria
+                val intent = Intent(activity,CartActivity::class.java)
+                val produto: Produto = Produto(nome,desc,preco,imagem, categoria)
+                val pedido:Pedido = Pedido(produto, textQuantidade.text.toString().toInt())
+                intent.putExtra("PEDIDO", pedido)
+                startActivity(intent)
+            }
         }
     }
+
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         if (outState != null)
