@@ -30,6 +30,7 @@ class ComprasActivity : AppCompatActivity() {
 
         val database = FirebaseDatabase.getInstance().reference
         val userRef = userID?.let {database.child("usuarios").child(it).child("compras")}
+
         userRef?.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 snapshot.children.forEach{

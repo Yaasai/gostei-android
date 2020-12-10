@@ -46,7 +46,8 @@ class MainActivity : AppCompatActivity() {
 
         if (requestCode == 0) {
             if (resultCode == AppCompatActivity.RESULT_OK) {
-                Toast.makeText(this, "Já autenticado!", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "Autenticado com sucesso!", Toast.LENGTH_LONG).show()
+                startActivity(Intent(this, PerfilActivity::class.java))
             }
             else {
                 finishAffinity()

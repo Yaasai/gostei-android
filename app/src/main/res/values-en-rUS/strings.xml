@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OneShotRPG</string>
+    <string name="home_pesquisa">Search</string>
+    <string name="your_cart">Your Cart</string>
+    <string name="end_cart">Check out</string>
+    <string name="back">Back</string>
+    <string name="cart">Cart</string>
+    <string name="detalhes">See details</string>
+    <string name="quantidade">Quantity</string>
+    <string name="carrinho">Add to Cart</string>
+    <string name="btnprodutos">Products</string>
+    <string name="btncarrinho">Your Cart</string>
+    <string name="btncompras">Your Orders</string>
+    <string name="btnsair">Sign out</string>
+    <string name="bemvindo">"Welcome, "</string>
+    <string name="perfil">Profile</string>
+    <string name="sobre">About the App</string>
+</resources>

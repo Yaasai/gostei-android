@@ -7,23 +7,59 @@
     tools:context=".PerfilActivity">
 
     <Button
+        android:id="@+id/buttonProdutos"
+        android:layout_width="198dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/btnprodutos"
+        app:cornerRadius="100px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNome" />
+
+    <Button
         android:id="@+id/buttonCompras"
+        android:layout_width="201dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/btncompras"
+        app:cornerRadius="100px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCart" />
+
+    <Button
+        android:id="@+id/buttonCart"
+        android:layout_width="198dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/btncarrinho"
+        app:cornerRadius="100px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonProdutos" />
+
+    <TextView
+        android:id="@+id/textNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="260dp"
-        android:text="Ver pedidos anteriores"
+        android:layout_marginTop="88dp"
+        android:text="Text"
+        android:textColor="#000000"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonProdutos"
+        android:id="@+id/buttonSobre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Produtos"
+        android:layout_marginTop="76dp"
+        android:text="@string/sobre"
+        app:cornerRadius="100px"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonCompras" />
 
@@ -32,30 +68,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Sair"
+        android:text="@string/btnsair"
+        app:cornerRadius="100px"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCart" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSobre" />
 
-    <TextView
-        android:id="@+id/textNome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:text="Text"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/buttonCart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/cart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonProdutos" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,5 +7,12 @@
     <string name="cart">Carrinho</string>
     <string name="detalhes">Ver detalhes</string>
     <string name="quantidade">Quantidade</string>
-    <string name="carrinho">Adicionar ao carrinho</string>
+    <string name="btnprodutos">Produtos</string>
+    <string name="btncarrinho">Carrinho</string>
+    <string name="btncompras">Pedidos Anteriores</string>
+    <string name="btnsair">Sair</string>
+    <string name="carrinho">Adicionar ao Carrinho</string>
+    <string name="bemvindo">Bem vindo,</string>
+    <string name="perfil">Perfil</string>
+    <string name="sobre">Sobre a Aplicação</string>
 </resources>
